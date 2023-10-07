@@ -7,16 +7,18 @@
  *
  * Return: Always 0 (success)
 */
-int main() {
+int main(void)
+{
 	char alp, ALP;
-	for (alp='a';alp<='z';alp++)
+
+	for (alp = 'a'; alp <= 'z'; alp++)
 	{
 		putchar(alp);
 	}
-	for (ALP='A';ALP<='Z';ALP++)
+	for (ALP = 'A'; ALP <= 'Z'; ALP++)
 	{
 		putchar(ALP);
 	}
 	putchar('\n');
-	return 0;
+	return(0);
 }
