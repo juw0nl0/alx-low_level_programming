@@ -6,12 +6,12 @@
 */
 int main(void)
 {
-	int n;
-
-	for(n = 0; n < 10; n++)
+	char alp;
+	
+	for (alp = 'z'; alp >= 'a'; alp--)
 	{
-		printf ("%d", n);
+		putchar (alp);
 	}
-	printf ("\n");
+	putchar ('\n');
 	return(0);
 }
