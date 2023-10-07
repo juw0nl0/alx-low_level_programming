@@ -10,7 +10,7 @@ int main(void)
 
 	for (alp = 'a'; alp <= 'z'; alp++)
 	{
-		if (alp != 'q' && alp! = 'e')
+		if (alp != 'q' && alp != 'e')
 		{
 			putchar (alp);
 		}
