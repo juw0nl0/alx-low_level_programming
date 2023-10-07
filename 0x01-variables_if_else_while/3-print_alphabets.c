@@ -1,10 +1,12 @@
 #include <stdio.h>
+/* more headers goes there */
+
+/* betty style doc for function main goes there */
 /**
  * main - Entry point
  *
  * Return: Always 0 (success)
 */
-
 int main() {
     char alp, ALP;
     for (alp='a';alp<='z';alp++)
@@ -15,6 +17,5 @@ int main() {
     {
 	    putchar(ALP);
     }
-
     return 0;
 }
