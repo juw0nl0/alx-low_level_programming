@@ -8,14 +8,15 @@
  * Return: Always 0 (success)
 */
 int main() {
-    char alp, ALP;
-    for (alp='a';alp<='z';alp++)
-    {
-	    putchar(alp);
-    }
-    for (ALP='A';ALP<='Z';ALP++)
-    {
-	    putchar(ALP);
-    }
-    return 0;
+	char alp, ALP;
+	for (alp='a';alp<='z';alp++)
+	{
+		putchar(alp);
+	}
+	for (ALP='A';ALP<='Z';ALP++)
+	{
+		putchar(ALP);
+	}
+	putchar('\n');
+	return 0;
 }
