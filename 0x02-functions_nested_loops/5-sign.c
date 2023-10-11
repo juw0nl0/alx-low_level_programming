@@ -18,7 +18,7 @@ int print_sign(int n)
 		printf ("-\n");
 		return (-1);
 	}
-	else if (n = 0)
+	else if (n == 0)
 	{
 		printf ("0\n");
 		return (0);
