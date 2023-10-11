@@ -8,7 +8,7 @@
  * with the ASCII value
  *
  * parameter c - is an alphabet
- * Return - if YES it returns 1 otherwise returns 0.
+ * Return: if YES it returns 1 otherwise returns 0.
  */
 int _islower(int c)
 {
