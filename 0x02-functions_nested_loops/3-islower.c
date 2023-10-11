@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- * _islower - checks if a character is lowercase if YES it returns 1
- * otherwise returns 0 just like islower() function in ctype.h
+ * _islower function - checks if a character (c) is lowercase or not. if YES it returns 1
+ * otherwise returns 0.
+ * parameter c - is an alphabet
+ * Return - if YES it returns 1 otherwise returns 0.
  */
 int _islower(int c)
 {
