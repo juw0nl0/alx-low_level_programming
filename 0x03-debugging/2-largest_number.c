@@ -7,7 +7,6 @@
  * @c: third integer
  * Return: largest number
  */
-
 int largest_number(int x, int y, int z)
 {
 	int largest;
@@ -24,6 +23,5 @@ int largest_number(int x, int y, int z)
 	{
 		largest = z;
 	}
-
 	return (largest);
 }
