@@ -1,11 +1,11 @@
-#include "main.h"
-#include <stdio.h>
+#include "main.h"i
 
 /**
  * print_sign - checks if a character is positive,
  * negative or zero.
  * if positive it returns 1
- * if zero it returns 0, else it return negative
+ * els if zero it returns 0, 
+ * else it return negative -1,
  *
  * parameter n: is an interger
  * Return: if YES it returns 1, if zero it returns 0,
