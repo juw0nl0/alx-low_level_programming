@@ -7,7 +7,7 @@
  * if positive it returns 1
  * if zero it returns 0, else it return negative
  *
- * parameter n - is an interger
+ * parameter n: is an interger
  * Return: if YES it returns 1, if zero it returns 0,
  * else it return -1.
 */
@@ -15,15 +15,15 @@ int print_sign(int n)
 {
 	if (n < 0)
 	{
-		printf ("-1\n");
+		printf("-1\n");
 	}
 	else if (n == 0)
 	{
-		printf ("0\n");
+		printf("0\n");
 	}
 	else
 	{
-		printf ("+1\n");
+		printf("+1\n");
 	}
 	return (0);
 }
