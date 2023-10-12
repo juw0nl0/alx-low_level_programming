@@ -1,24 +1,27 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_sign - return 0 letter not 
- * lowercase, 1 letter lowercase
+ * print_sign - Prints the sign of a number
+ * @n: The number to be checked
  *
- * @n : number to check
+ * Return: 1 for positive num, -1 
+ * for negative num or zero for anything else
 */
 int print_sign(int n)
 {
 	if (n < 0)
 	{
-		printf ("-1\n");
+		_putchar(45);
+		return (-1);
 	}
 	else if (n == 0)
 	{
-		printf ("0\n");
+		_putchar(48);
+		return (0);
 	}
 	else
 	{
-		printf ("+1\n");
+		_putchar(43);
+		return (1);
 	}
 }
