@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * void swap_int - function that sway the value of two pointers
+ * swap_int - function that sway the value of two pointers
  *
  * @a: first pointer entry
  * @b: second pointer entry
