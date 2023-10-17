@@ -4,8 +4,9 @@
  * _strlen - a function that count the number of
  * character in a pointer to a string array
  *
- * $s: is the varable that hold the character
- * return: zero or the lenth of the character
+ * @s: is the inputarray of strings
+ *
+ * Return: zero or the lenth of the string
  */
 int _strlen(char *s)
 {
@@ -15,6 +16,6 @@ int _strlen(char *s)
 	}
 	else
 	{
-		return 1 + _strlen(s + 1);
+		return (1 + _strlen(s + 1));
 	}
 }
