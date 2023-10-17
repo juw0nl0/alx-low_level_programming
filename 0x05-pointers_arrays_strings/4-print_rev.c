@@ -18,5 +18,5 @@ void print_rev(char *s)
 		return;
 	}
 	print_rev(s + 1);
-	_putchar('%c', *s);
+	_putchar(*s);
 }
