@@ -3,7 +3,9 @@
 /**
  * void swap_int - a function that sway the value of two pointers
  * 
- * @a and @b: are entry  parameter for the function
+ * @a: entry parameter for swap function
+ * @b: entry parameter for swap function
+ *
  */
 void swap_int(int *a, int *b)
 {
@@ -11,6 +13,3 @@ void swap_int(int *a, int *b)
 	*a = *b;
 	*b = temp;
 }
-
-	
-
