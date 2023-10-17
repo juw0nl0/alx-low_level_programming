@@ -12,13 +12,8 @@
  */
 void print_rev(char *s)
 {
-	int len;
+	int len =  _strlen(s);
 	int i;
-
-	while (s[len] != '\0')
-	{
-		len++;
-	}
 
 	for (i = len - 1; i >= 0; i--)
 	{
