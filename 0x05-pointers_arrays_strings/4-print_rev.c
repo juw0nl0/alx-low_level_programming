@@ -12,11 +12,19 @@
  */
 void print_rev(char *s)
 {
-	if (*s == '\0')
+	if (*s == NULL)
 	{
-		_putchar('\n');
 		return;
 	}
-	print_rev(s + 1);
+	int len = 0;
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	for (int 1 = len -1; i >= 0; i--)
+	{
+		_putchar(s[i]);
+
+	}
 	_putchar(*s);
 }
