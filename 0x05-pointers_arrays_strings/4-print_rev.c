@@ -12,7 +12,7 @@
  */
 void print_rev(char *s)
 {
-	if (*s == NULL)
+	if (*s = NULL)
 	{
 		return;
 	}
