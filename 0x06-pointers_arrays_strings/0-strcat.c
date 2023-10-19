@@ -6,7 +6,7 @@
   *@dest: a first pointer parater to the function
   *@src: a second  pointer parater to the function
   *Return: a concantenated string
-  */
+ */
 char *_strcat(char *dest, char *src)
 {
 	char *final_dest = dest;
@@ -22,5 +22,5 @@ char *_strcat(char *dest, char *src)
 		src++;
 	}
 	dest = ('\0');
-	return (final_dest);
+	return(final_dest);
 }
