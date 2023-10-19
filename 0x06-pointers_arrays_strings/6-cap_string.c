@@ -1,11 +1,13 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * cap_string - capitalizes most of the words in a string.
- * @s: analized string.
+ * cap_string - Write a function that capitalizes all words of a string.
  *
- * Return: String with all words capitalized.
+ * @entry: This is the input string
+ *
+ * Return: String capitalized
  */
-char *cap_string(char *s)
+char *cap_string(char *entry)
 {
 	int conversion, index, count;
 
