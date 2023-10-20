@@ -1,4 +1,6 @@
 #include "main.h"
+#include <ctype.h>
+#include <stdlib.h>
 
 /**
  * cap_string - Write a function that capitalizes all words of a string.
@@ -7,29 +9,38 @@
  *
  * Return: String capitalized
  */
-char *cap_string(char *entry)
+char* cap_string(char* str)
 {
-	int conversion, index, count;
-
-	char chars[] = {' ', ',', ';', '.', '!',
-			 '?', '"', '(', ')', '{', '}',  '\t', '\n', '\0'};
-	conversion = 32;
-
-	for (index = 0; entry[index] != '\0'; index++)
+	char* result = (char*)malloc(strlen(str) + 1);
+	if (result == NULL)
 	{
-		if (entry[index] >= 'index' && entry[index] <= 'z')
+        	return NULL; // Memory allocation failed
+	}
+	int result_index = 0;
+	int length = strlen(str);
+	bool capitalize = true;
+
+	for (int i = 0; i < length; i++)
+	{
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+		str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+		str[i] == '!' || str[i] == '?' || str[i] == '"' ||
+		str[i] == '(' || str[i] == ')' || str[i] == '{' ||
+		str[i] == '}')
 		{
-			entry[index] =  entry[index] - conversion;
+			result[result_index++] = str[i];
+			capitalize = true;
 		}
-		conversion = 0;
-		for (count = 0; chars[count] != '\0'; count++)
+		else if (capitalize)
 		{
-			if (chars[count] == entry[index])
-			{
-				conversion = 32;
-				break;
-			}
+			result[result_index++] = toupper(str[i]);
+			capitalize = false;
+		}
+		else
+		{
+			result[result_index++] = tolower(str[i]);
 		}
 	}
-	return (entry);
+	result[result_index] = '\0'
+	return (result);
 }
