@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * rot13 - a function that encodes a string using rot13
+ * rot13 - Write a function that encodes a string using rot13
+ *
  * @hi: This is my input string
  *
  * Return: String converted to rot13
