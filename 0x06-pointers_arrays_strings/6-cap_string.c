@@ -1,46 +1,37 @@
 #include "main.h"
-#include <ctype.h>
-#include <stdlib.h>
 
 /**
- * cap_string - Write a function that capitalizes all words of a string.
+ *cap_string - capitalizes every first letter of a word in a string.
+ *separators of words are:  space, tabulation,
+ * new line, ,, ;, ., !, ?, ", (, ), {, and }.
+ *@s: pointer to string.
  *
- * @entry: This is the input string
- *
- * Return: String capitalized
+ *Return: pointer to s.
  */
-char* cap_string(char* str)
+char *cap_string(char *s)
 {
-	char* result = (char*)malloc(strlen(str) + 1);
-	if (result == NULL)
-	{
-        	return NULL; // Memory allocation failed
-	}
-	int result_index = 0;
-	int length = strlen(str);
-	bool capitalize = true;
+	int count;
 
-	for (int i = 0; i < length; i++)
-	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-		str[i] == ',' || str[i] == ';' || str[i] == '.' ||
-		str[i] == '!' || str[i] == '?' || str[i] == '"' ||
-		str[i] == '(' || str[i] == ')' || str[i] == '{' ||
-		str[i] == '}')
+/*  scan through string */
+	count = 0;
+	while (s[count] != '\0')
+	{/* if next character after count is a char , capitalise it */
+		if (s[0] >= 97 && s[0] <= 122)
 		{
-			result[result_index++] = str[i];
-			capitalize = true;
+			s[0] = s[0] - 32;
 		}
-		else if (capitalize)
+		if (s[count] == ' ' || s[count] == '\t' || s[count] == '\n'
+		    || s[count] == ',' || s[count] == ';' || s[count] == '.'
+		    || s[count] == '.' || s[count] == '!' || s[count] == '?'
+		    || s[count] == '"' || s[count] == '(' || s[count] == ')'
+		    || s[count] == '{' || s[count] == '}')
 		{
-			result[result_index++] = toupper(str[i]);
-			capitalize = false;
+			if (s[count + 1] >= 97 && s[count + 1] <= 122)
+			{
+				s[count + 1] = s[count + 1] - 32;
+			}
 		}
-		else
-		{
-			result[result_index++] = tolower(str[i]);
-		}
+		count++;
 	}
-	result[result_index] = '\0'
-	return (result);
+	return (s);
 }
