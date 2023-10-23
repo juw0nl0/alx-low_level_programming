@@ -1,9 +1,9 @@
 #include "main.h"
-/**
-* print_chessboard - a function that prints the chessboard.
-* @a: 2D array
-*/
 
+/**
+ * print_chessboard - a function that prints the chessboard.
+ * @a: 2D array
+ */
 void print_chessboard(char (*a)[8])
 {
 	int row;
