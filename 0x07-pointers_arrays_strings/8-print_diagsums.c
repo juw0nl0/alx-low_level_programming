@@ -9,23 +9,18 @@
 */
 void print_diagsums(int *a, int size)
 {
+	// Sum of the primary diagonal
 	int primary_diag_sum = 0;
+	// Sum of the secondary diagonal
 	int secondary_diag_sum = 0;
-	int row, i;
 
-	for (row = 0; row < size; row++)
+	for (int i = 0; i < size; i++)
 	{
-		i = (row * size) + row;
-		primary_diag_sum += a[i];
+		// Elements on the primary diagonal
+		primary_diag_sum += a[i * size + i];
+		// Elements on the secondary diagonal
+		secondary_diag_sum += a[i * size + (size - 1 - i)];
 	}
-
-	for (row = 1; row <= size; row++)
-	{
-		i = (row * size) - row;
-		secondary_diag_sum += a[i];
-	}
-
-	printf("%d, %d\n", primary_diag_sum, secondary_diag_sum);
 	printf("Primary diagonal sum: %d\n", primary_diag_sum);
 	printf("Secondary diagonal sum: %d\n", secondary_diag_sum);
 }
