@@ -3,13 +3,13 @@
 /**
   * _strlen_recursion - A function that return the lenght of a string
   * @s: an input paranmeter to the function whichbia a pointer to the string
-  *
+  * Return: the length of a string in byte
   */
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 	{
-		return;
+		return (0);
 	}
 	else
 	{
