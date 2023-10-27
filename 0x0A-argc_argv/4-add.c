@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 			if (arg[j] >= '0' && arg[j] <= '9')
 			{
 				num = num * 10 + (arg[j] - '0');
-				j++
+				j++;
 			}
 			else
 			{
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		sum += num
+		sum += num;
 	}
 	printf("d\n", sum);
 	printf(0);
