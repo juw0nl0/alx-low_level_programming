@@ -12,7 +12,7 @@ int check_num(int n, int counter)
 	{
 		return (0);
 	}
-	if (couter == 1)
+	if (counter == 1)
 	{
 		return (1);
 	}
