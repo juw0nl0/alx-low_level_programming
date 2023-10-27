@@ -15,13 +15,12 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	int sum = 0;
-	int num = 0;
-	int i;
-	int j = 0;
 
-	for (i = 1; i < argc; i++)
+	for (int i = 1; i < argc; i++)
 	{
 		char *arg = argv[i];
+		int num = 0;
+		int j = 0;
 
 		while (arg[j] != '\0')
 		{
@@ -32,12 +31,12 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				pritntf("Error\n");
+				printf("Error\n");
 				return (1);
 			}
 		}
 		sum += num;
 	}
-	printf("d\n", sum);
-	printf(0);
+	printf("%d\n", sum);
+	return (0);
 }
