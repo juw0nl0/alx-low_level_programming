@@ -1,42 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
- * main - Print all arguments it receives
- * @argc: Count arguments
- * @argv: Arguments
- * Return: Always 0 (Success)
+ * main - main funct
+ * @argc: param count
+ * @argv: param poiter
+ * Return: int
  */
 int main(int argc, char *argv[])
 {
-	if (argc < 2)
-	{
-		printf("0\n");
-		return (0);
-	}
-	int sum = 0;
+	int i, j, sum = 0;
 
-	for (int i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-		char *arg = argv[i];
-		int num = 0;
-		int j = 0;
-
-		while (arg[j] != '\0')
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (arg[j] >= '0' && arg[j] <= '9')
-			{
-				num = num * 10 + (arg[j] - '0');
-				j++;
-			}
-			else
+			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		sum += num;
+		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
+
 	return (0);
 }
