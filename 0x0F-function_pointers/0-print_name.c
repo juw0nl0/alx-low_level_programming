@@ -1,15 +1,15 @@
-#include "function_pointers.h"
 #include <stdio.h>
-
+#include "function_pointers.h"
 /**
-  * print_name - function that prints a name
-  * @name: a pointer to a charater data type
-  * @f:  a pointer funtion that point to a character and return nothing
-  * Return: nothing
-  */
+ * print_name - function thats prints a name passed to it
+ * @name: char to display to the stdout
+ * @f: A pointer function
+ * author: Sammykingx
+ * Return: No return cause we've declared VOID as R_TYPE
+*/
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == NULL || f == NULL)
+	if (!name || !f) /* if any is NULL */
 		return;
 
 	f(name);
